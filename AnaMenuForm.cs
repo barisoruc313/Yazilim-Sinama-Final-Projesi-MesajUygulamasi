@@ -24,5 +24,26 @@ namespace MesajUygulama
             ekle.FormBorderStyle = FormBorderStyle.None;
             ekle.Show();
         }
+
+        private void AnaMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SifreliDosyaForm sifre = new SifreliDosyaForm();
+            sifre.MdiParent = this;
+            sifre.FormBorderStyle = FormBorderStyle.None;
+            sifre.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SoketForm skt = new SoketForm();
+            skt.MdiParent = this;
+            skt.FormBorderStyle = FormBorderStyle.None;
+            skt.Show();
+        }
     }
 }

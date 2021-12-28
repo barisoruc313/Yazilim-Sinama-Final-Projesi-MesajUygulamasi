@@ -92,6 +92,7 @@ namespace MesajUygulama
             this.Name = "Sha256Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sha256Form";
+            this.Load += new System.EventHandler(this.Sha256Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

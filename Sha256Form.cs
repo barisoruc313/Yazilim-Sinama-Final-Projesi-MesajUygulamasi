@@ -37,5 +37,10 @@ namespace MesajUygulama
             txtSifrelenen.Text = sb.ToString();
 
         }
+
+        private void Sha256Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

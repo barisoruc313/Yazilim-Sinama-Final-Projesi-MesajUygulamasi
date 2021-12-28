@@ -52,6 +52,7 @@ namespace MesajUygulama
             this.button2.TabIndex = 1;
             this.button2.Text = "SoketMesaj";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -61,6 +62,7 @@ namespace MesajUygulama
             this.button3.TabIndex = 2;
             this.button3.Text = "ŞifreliDosya";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AnaMenuForm
             // 
@@ -74,6 +76,7 @@ namespace MesajUygulama
             this.Name = "AnaMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ana Menü";
+            this.Load += new System.EventHandler(this.AnaMenuForm_Load);
             this.ResumeLayout(false);
 
         }
