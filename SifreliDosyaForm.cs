@@ -15,6 +15,8 @@ namespace MesajUygulama
 {
     public partial class SifreliDosyaForm : Form
     {
+        byte[] abc;
+        byte[,] table;
         public SifreliDosyaForm()
         {
             InitializeComponent();
@@ -27,7 +29,17 @@ namespace MesajUygulama
 
         private void SifreliDosyaForm_Load(object sender, EventArgs e)
         {
+            rbSifrele.Checked = true;
+            abc = new byte[256];
+            for (int i = 0; i < 256; i++)
+                abc[i] = Convert.ToByte(i);
 
+            table = new byte[256, 256];
+            for(int i = 0; i<256; i++)
+                for(int j = 0; j<256; j++)
+                {
+                    table[i, j] = abc[(i + j) % 256];
+                }
         }
         OpenFileDialog file = new OpenFileDialog();
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -88,6 +100,110 @@ namespace MesajUygulama
             {
                 // Call the function to compress the pdf file
                 Program.CompressPdfFile(filePath, binPath, codingSchemePath);
+            }
+        }
+
+        private void rbSifrele_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbSifrele.Checked)
+            {
+                rbCoz.Checked = false;
+            }
+        }
+
+        private void rbCoz_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbCoz.Checked)
+            {
+                rbSifrele.Checked = false;
+            }
+
+        }
+
+        private void btnUygula_Click(object sender, EventArgs e)
+        {
+            if(!File.Exists(txtInput.Text))
+            {
+                MessageBox.Show("Dosya Bulunamadı.");
+                return;
+           
+            }
+            if(string.IsNullOrEmpty(txtSifre.Text))
+            {
+                MessageBox.Show("Şifre boş tekrar deneyin.");
+                return;
+            }
+
+            try
+            {
+                byte[] fileContent = File.ReadAllBytes(txtInput.Text);
+                byte[] passwordTmp = Encoding.ASCII.GetBytes(txtSifre.Text);
+                byte[] keys = new byte[fileContent.Length];
+                for (int i = 0; i < fileContent.Length; i++)
+                    keys[i] = passwordTmp[i % passwordTmp.Length];
+                //şifreleme
+                byte[] result = new byte[fileContent.Length];
+                if (rbSifrele.Checked)
+                {
+
+                    for (int i = 0; i < fileContent.Length; i++)
+                    {
+                        byte value = fileContent[i];
+                        byte key = keys[i];
+                        int valueIndex = -1, keyIndex = -1;
+                        for (int j = 0; j < 256; j++)
+                            if (abc[j] == value)
+                            {
+                                valueIndex = j;
+                                break;
+                            }
+                        for (int j = 0; j < 256; j++)
+                            if (abc[j] == key)
+                            {
+                                keyIndex = j;
+                                break;
+                            }
+                        result[i] = table[keyIndex, valueIndex];
+
+
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < fileContent.Length; i++)
+                    {
+                        byte value = fileContent[i];
+                        byte key = keys[i];
+                        int valueIndex = -1, keyIndex = -1;
+                        
+                        for (int j = 0; j < 256; j++)
+                            if (abc[j] == key)
+                            {
+                                keyIndex = j;
+                                break;
+                            }
+
+                        for (int j = 0; j < 256; j++)
+                            if (table[keyIndex,j] == value)
+                            {
+                                valueIndex = j;
+                                break;
+                            }
+                        result[i] = abc[valueIndex];
+                    }
+                }
+                string fileExt = Path.GetExtension(txtInput.Text);
+                SaveFileDialog sd = new SaveFileDialog();
+                sd.Filter = "Files(*" + fileExt + ") | *" + fileExt;
+                if(sd.ShowDialog()==DialogResult.OK)
+                {
+                    File.WriteAllBytes(sd.FileName, result);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dosya Kullanımda.");
+                return;
             }
         }
     }
