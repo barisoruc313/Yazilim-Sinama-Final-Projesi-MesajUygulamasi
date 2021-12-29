@@ -51,7 +51,7 @@ namespace MesajUygulama
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(29, 199);
+            this.txtOutput.Location = new System.Drawing.Point(30, 220);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(241, 20);
             this.txtOutput.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace MesajUygulama
             // 
             // btnCompress
             // 
-            this.btnCompress.Location = new System.Drawing.Point(110, 117);
+            this.btnCompress.Location = new System.Drawing.Point(196, 246);
             this.btnCompress.Name = "btnCompress";
             this.btnCompress.Size = new System.Drawing.Size(75, 20);
             this.btnCompress.TabIndex = 3;
@@ -79,7 +79,7 @@ namespace MesajUygulama
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 183);
+            this.label1.Location = new System.Drawing.Point(27, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace MesajUygulama
             // rbSifrele
             // 
             this.rbSifrele.AutoSize = true;
-            this.rbSifrele.Location = new System.Drawing.Point(67, 252);
+            this.rbSifrele.Location = new System.Drawing.Point(144, 119);
             this.rbSifrele.Name = "rbSifrele";
             this.rbSifrele.Size = new System.Drawing.Size(54, 17);
             this.rbSifrele.TabIndex = 5;
@@ -100,7 +100,7 @@ namespace MesajUygulama
             // rbCoz
             // 
             this.rbCoz.AutoSize = true;
-            this.rbCoz.Location = new System.Drawing.Point(129, 252);
+            this.rbCoz.Location = new System.Drawing.Point(207, 120);
             this.rbCoz.Name = "rbCoz";
             this.rbCoz.Size = new System.Drawing.Size(64, 17);
             this.rbCoz.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace MesajUygulama
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(67, 276);
+            this.txtSifre.Location = new System.Drawing.Point(144, 137);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(126, 20);
             this.txtSifre.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace MesajUygulama
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 279);
+            this.label2.Location = new System.Drawing.Point(107, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 8;
@@ -127,7 +127,7 @@ namespace MesajUygulama
             // 
             // btnUygula
             // 
-            this.btnUygula.Location = new System.Drawing.Point(199, 275);
+            this.btnUygula.Location = new System.Drawing.Point(199, 163);
             this.btnUygula.Name = "btnUygula";
             this.btnUygula.Size = new System.Drawing.Size(71, 21);
             this.btnUygula.TabIndex = 9;

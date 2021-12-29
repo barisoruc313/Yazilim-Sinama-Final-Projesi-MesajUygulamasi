@@ -53,7 +53,7 @@ namespace MesajUygulama
 
             // write all the bits from byte array in bin file
             File.WriteAllBytes(binFilePath, bytes);
-            message = "Text File Encoded Successfully";
+            message = "Dosya Başarıyla Şifrelendi";
             SifreliDosyaForm.showMessage(message);
 
             var stringBuilder = new StringBuilder();
@@ -65,7 +65,7 @@ namespace MesajUygulama
             }
             var stringBuilder2 = stringBuilder.ToString();
             File.WriteAllText(codingSchemePath, stringBuilder2);
-            message = "Coding Scheme File Created Successfully";
+            message = "Kod Şifre Şema Dosyası Oluşturuldu";
             SifreliDosyaForm.showMessage(message);
 
         }

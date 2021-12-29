@@ -12,6 +12,7 @@ namespace MesajUygulama
 {
     public partial class AnaMenuForm : Form
     {
+        
         public AnaMenuForm()
         {
             InitializeComponent();
@@ -40,10 +41,10 @@ namespace MesajUygulama
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SoketForm skt = new SoketForm();
-            skt.MdiParent = this;
-            skt.FormBorderStyle = FormBorderStyle.None;
-            skt.Show();
+            SifreSoket ss = new SifreSoket();
+            ss.MdiParent = this;
+            ss.FormBorderStyle = FormBorderStyle.None;
+            ss.Show();
         }
     }
 }
