@@ -41,10 +41,12 @@ namespace MesajUygulama
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SifreSoket ss = new SifreSoket();
-            ss.MdiParent = this;
-            ss.FormBorderStyle = FormBorderStyle.None;
-            ss.Show();
+            SifreSoket skt = new SifreSoket();
+            skt.MdiParent = this;
+            skt.FormBorderStyle = FormBorderStyle.None;
+            skt.Show();
+
+
         }
     }
 }
