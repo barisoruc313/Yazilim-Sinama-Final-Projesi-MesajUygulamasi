@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MesajUygulama", "MesajUygulama.csproj", "{2C58D696-B217-4BBA-B51B-02ED8F1A7705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MesajUygulamaTests", "..\MesajUygulamaTests\MesajUygulamaTests.csproj", "{D310D3E8-AD39-4261-BCE3-C5B01D430F15}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{F7932FD1-7A03-4B8B-885E-9BFBE0521384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MesajUygulamaTests", "..\..\..\Desktop\MesajUygulamaTests\MesajUygulamaTests.csproj", "{D310D3E8-AD39-4261-BCE3-C5B01D430F15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

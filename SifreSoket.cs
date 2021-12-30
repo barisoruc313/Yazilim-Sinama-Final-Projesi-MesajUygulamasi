@@ -23,7 +23,7 @@ namespace MesajUygulama
             serverSocket.Start();
         }
         TcpClient clientSocket = new TcpClient();
-        SqlConnection baglanti = new SqlConnection("Data Source=pcBaro;Initial Catalog=sifrekontrol;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=MSI;Initial Catalog=sifrekontrol;Integrated Security=True");
 
 
         private void SifreSoket_Load(object sender, EventArgs e)
