@@ -83,7 +83,7 @@ namespace MesajUygulama
             // 
             this.kryptonButton3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
             this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.kryptonButton3.Location = new System.Drawing.Point(23, 266);
+            this.kryptonButton3.Location = new System.Drawing.Point(23, 276);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
