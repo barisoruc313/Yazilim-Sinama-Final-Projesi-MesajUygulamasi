@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Data.SqlClient;
-
+using ComponentFactory.Krypton.Toolkit;
 
 namespace MesajUygulama
 {
-    public partial class SifreSoket : Form
+    public partial class SifreSoket : KryptonForm
     {
         [Obsolete]
         public SifreSoket()
@@ -38,7 +38,7 @@ namespace MesajUygulama
         }
 
 
-        private void btnSifrele_Click(object sender, EventArgs e)
+        private void btnSifrele_Click_1(object sender, EventArgs e)
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into sifretable (sifre1) Values ('" + textBox2.Text.ToString() + "')", baglanti);
@@ -66,7 +66,7 @@ namespace MesajUygulama
 
         }
 
-        private void btnCoz_Click(object sender, EventArgs e)
+        private void btnCoz_Click_1(object sender, EventArgs e)
         {
             baglanti.Open();
             string query = "Select *from sifretable where sifre1 = '" + textBox5.Text.Trim() + "'";
@@ -94,7 +94,7 @@ namespace MesajUygulama
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into sifretable (sifre2) Values ('" + textBox5.Text.ToString() + "')", baglanti);
@@ -120,7 +120,7 @@ namespace MesajUygulama
             textBox5.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             baglanti.Open();
             string query = "Select *from sifretable where sifre2 = '" + textBox2.Text.Trim() + "'";
@@ -151,5 +151,7 @@ namespace MesajUygulama
         {
 
         }
+
+      
     }
 }

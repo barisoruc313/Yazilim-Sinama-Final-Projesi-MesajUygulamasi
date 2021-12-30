@@ -8,18 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using ComponentFactory.Krypton.Toolkit;
 
 
 namespace MesajUygulama
 {
-    public partial class Sha256Form : Form
+    public partial class Sha256Form : KryptonForm
     {
         public Sha256Form()
         {
             InitializeComponent();
         }
 
-        private void btnSifrele_Click(object sender, EventArgs e)
+   
+
+        private void Sha256Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMesaj_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSifrele_Click_1(object sender, EventArgs e)
         {
             SHA256Managed sha256 = new SHA256Managed();
 
@@ -35,12 +48,6 @@ namespace MesajUygulama
             }
 
             txtSifrelenen.Text = sb.ToString();
-
-        }
-
-        private void Sha256Form_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -36,11 +36,27 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="GemBox.Document, Version=33.0.0.1372, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
       <HintPath>packages\GemBox.Document.33.0.1372\lib\net35\GemBox.Document.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MetroSet_UI.2.0.0\lib\net45\MetroSet UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
@@ -54,6 +70,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -147,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
