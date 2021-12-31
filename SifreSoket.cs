@@ -61,7 +61,7 @@ namespace MesajUygulama
 
             }
 
-            textBox1.Clear();
+            // textBox1.Clear();
             textBox2.Clear();
 
         }
@@ -115,8 +115,8 @@ namespace MesajUygulama
                 MessageBox.Show("8 HANELİ ŞİFRE GİRİNİZ");
 
             }
-            
-            textBox4.Clear();
+
+            // textBox4.Clear();
             textBox5.Clear();
         }
 
